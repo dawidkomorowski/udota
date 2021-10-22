@@ -7,5 +7,8 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Button Content="Click"></Button>
+    <StackPanel>
+        <Button Content="Click" Click="ButtonBase_OnClick"></Button>
+        <TextBlock Name="textBlock"></TextBlock>
+    </StackPanel>
 </Window>

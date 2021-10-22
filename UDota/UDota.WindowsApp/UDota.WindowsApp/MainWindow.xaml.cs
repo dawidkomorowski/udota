@@ -1,6 +1,8 @@
-﻿using System.Text;
+﻿using System.Collections.ObjectModel;
+using Microsoft.UI.Dispatching;
 using Microsoft.UI.Xaml;
-using UDota.CoreLib.OpenDota;
+using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Input;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -12,24 +14,57 @@ namespace UDota.WindowsApp
     /// </summary>
     public sealed partial class MainWindow : Window
     {
+        private readonly MainViewModel _mainViewModel;
+
         public MainWindow()
         {
             InitializeComponent();
+
+            NavigationMenuItems = new ObservableCollection<NavigationViewItem>();
+
+            _mainViewModel = new MainViewModel();
+            BindTeamsToNavigationView(_mainViewModel.Teams);
         }
 
-        private async void ButtonBase_OnClick(object sender, RoutedEventArgs e)
-        {
-            var odc = new OpenDotaClient();
-            var players = await odc.SearchPlayers("Dakki");
+        private ObservableCollection<NavigationViewItem> NavigationMenuItems { get; }
 
-            var sb = new StringBuilder();
-            foreach (var player in players)
+        private NavigationViewItem CreateAddTeamNavigationViewItem()
+        {
+            var navigationViewItem = new NavigationViewItem
             {
-                sb.Append("Player name: ");
-                sb.AppendLine(player.Name);
+                Icon = new SymbolIcon(Symbol.Add),
+                SelectsOnInvoked = false,
+                Content = "Add Team"
+            };
+
+            navigationViewItem.Tapped += AddTeam_OnTapped;
+
+            return navigationViewItem;
+        }
+
+        private void BindTeamsToNavigationView(ObservableCollection<string> teams)
+        {
+            void RecreateNavigationMenuItems()
+            {
+                NavigationMenuItems.Clear();
+
+                foreach (var team in teams)
+                {
+                    var navigationViewItem = new NavigationViewItem { Content = team };
+                    NavigationMenuItems.Add(navigationViewItem);
+                }
+
+                NavigationMenuItems.Add(CreateAddTeamNavigationViewItem());
             }
 
-            textBlock.Text = sb.ToString();
+            teams.CollectionChanged += (_, _) => RecreateNavigationMenuItems();
+
+            RecreateNavigationMenuItems();
+        }
+
+        private void AddTeam_OnTapped(object sender, TappedRoutedEventArgs e)
+        {
+            DispatcherQueue.TryEnqueue(DispatcherQueuePriority.Normal, () => { _mainViewModel.AddTeam(); });
         }
     }
 }

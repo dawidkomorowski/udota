@@ -7,8 +7,9 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <StackPanel>
-        <Button Content="Click" Click="ButtonBase_OnClick"></Button>
-        <TextBlock Name="textBlock"></TextBlock>
-    </StackPanel>
+    <NavigationView IsSettingsVisible="False" IsPaneToggleButtonVisible="False" IsBackButtonVisible="Collapsed"
+                    IsPaneOpen="True" MenuItemsSource="{x:Bind NavigationMenuItems, Mode=OneWay}">
+        <Frame>
+        </Frame>
+    </NavigationView>
 </Window>

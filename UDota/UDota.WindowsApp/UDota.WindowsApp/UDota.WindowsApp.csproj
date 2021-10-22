@@ -16,4 +16,8 @@
     <PackageReference Include="Microsoft.ProjectReunion.WinUI" Version="0.8.4" />
     <Manifest Include="$(ApplicationManifest)" />
   </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\UDota.CoreLib\UDota.CoreLib.csproj" />
+  </ItemGroup>
 </Project>

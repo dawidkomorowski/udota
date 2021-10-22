@@ -3,6 +3,7 @@ using Microsoft.UI.Dispatching;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Input;
+using Microsoft.UI.Xaml.Navigation;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -37,7 +38,7 @@ namespace UDota.WindowsApp
                 Content = "Add Team"
             };
 
-            navigationViewItem.Tapped += AddTeam_OnTapped;
+            navigationViewItem.Tapped += AddTeamNavigationViewItem_OnTapped;
 
             return navigationViewItem;
         }
@@ -62,9 +63,20 @@ namespace UDota.WindowsApp
             RecreateNavigationMenuItems();
         }
 
-        private void AddTeam_OnTapped(object sender, TappedRoutedEventArgs e)
+        private void AddTeamNavigationViewItem_OnTapped(object sender, TappedRoutedEventArgs e)
         {
             DispatcherQueue.TryEnqueue(DispatcherQueuePriority.Normal, () => { _mainViewModel.AddTeam(); });
+        }
+
+        private void NavigationView_OnItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
+        {
+            var navigationOptions = new FrameNavigationOptions
+            {
+                TransitionInfoOverride = args.RecommendedNavigationTransitionInfo,
+                IsNavigationStackEnabled = false
+            };
+
+            ContentFrame.NavigateToType(typeof(AddTeamPage), args.InvokedItem, navigationOptions);
         }
     }
 }

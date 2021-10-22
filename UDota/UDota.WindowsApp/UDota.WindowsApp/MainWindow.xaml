@@ -8,8 +8,8 @@
     mc:Ignorable="d">
 
     <NavigationView IsSettingsVisible="False" IsPaneToggleButtonVisible="False" IsBackButtonVisible="Collapsed"
-                    IsPaneOpen="True" MenuItemsSource="{x:Bind NavigationMenuItems, Mode=OneWay}">
-        <Frame>
-        </Frame>
+                    IsPaneOpen="True" MenuItemsSource="{x:Bind NavigationMenuItems, Mode=OneWay}"
+                    ItemInvoked="NavigationView_OnItemInvoked">
+        <Frame Name="ContentFrame" />
     </NavigationView>
 </Window>

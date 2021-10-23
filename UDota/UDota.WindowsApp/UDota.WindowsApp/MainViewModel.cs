@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.ObjectModel;
+using Microsoft.Toolkit.Mvvm.ComponentModel;
 
 namespace UDota.WindowsApp
 {
-    public sealed class MainViewModel
+    public sealed partial class MainViewModel : ObservableObject
     {
-        public ObservableCollection<string> Teams { get; }
+        [ObservableProperty] private string _selectedTeam;
 
         public MainViewModel()
         {
@@ -17,6 +18,8 @@ namespace UDota.WindowsApp
                 Teams.Add($"Team {i}");
             }
         }
+
+        public ObservableCollection<string> Teams { get; }
 
         public void AddTeam()
         {

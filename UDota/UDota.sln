@@ -5,11 +5,13 @@ VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{C7167F0D-BC9F-4E6E-AFE1-012C56B48DB5}") = "UDota.WindowsApp (Package)", "UDota.WindowsApp\UDota.WindowsApp (Package)\UDota.WindowsApp (Package).wapproj", "{F86DC344-9031-4AC9-BFB6-42C50F9EAD77}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UDota.WindowsApp", "UDota.WindowsApp\UDota.WindowsApp\UDota.WindowsApp.csproj", "{82A5B7D1-8DA5-4806-815E-BFC21B0594C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UDota.WindowsApp", "UDota.WindowsApp\UDota.WindowsApp\UDota.WindowsApp.csproj", "{82A5B7D1-8DA5-4806-815E-BFC21B0594C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UDota.CoreLib", "UDota.CoreLib\UDota.CoreLib.csproj", "{A36E4B34-0458-4F62-B375-4C9D1CCF133A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UDota.CoreLib", "UDota.CoreLib\UDota.CoreLib.csproj", "{A36E4B34-0458-4F62-B375-4C9D1CCF133A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UDota.CoreLib.UnitTests", "UDota.CoreLib.UnitTests\UDota.CoreLib.UnitTests.csproj", "{488111C9-BFFD-4DB9-A781-182EE3B2B663}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UDota.CoreLib.UnitTests", "UDota.CoreLib.UnitTests\UDota.CoreLib.UnitTests.csproj", "{488111C9-BFFD-4DB9-A781-182EE3B2B663}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UDota.WindowsApp.UnitTests", "UDota.WindowsApp.UnitTests\UDota.WindowsApp.UnitTests.csproj", "{E3B2CF31-39AF-4000-B6C5-F56351F7C13C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -89,6 +91,22 @@ Global
 		{488111C9-BFFD-4DB9-A781-182EE3B2B663}.Release|x64.Build.0 = Release|Any CPU
 		{488111C9-BFFD-4DB9-A781-182EE3B2B663}.Release|x86.ActiveCfg = Release|Any CPU
 		{488111C9-BFFD-4DB9-A781-182EE3B2B663}.Release|x86.Build.0 = Release|Any CPU
+		{E3B2CF31-39AF-4000-B6C5-F56351F7C13C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3B2CF31-39AF-4000-B6C5-F56351F7C13C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3B2CF31-39AF-4000-B6C5-F56351F7C13C}.Debug|arm64.ActiveCfg = Debug|Any CPU
+		{E3B2CF31-39AF-4000-B6C5-F56351F7C13C}.Debug|arm64.Build.0 = Debug|Any CPU
+		{E3B2CF31-39AF-4000-B6C5-F56351F7C13C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{E3B2CF31-39AF-4000-B6C5-F56351F7C13C}.Debug|x64.Build.0 = Debug|Any CPU
+		{E3B2CF31-39AF-4000-B6C5-F56351F7C13C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E3B2CF31-39AF-4000-B6C5-F56351F7C13C}.Debug|x86.Build.0 = Debug|Any CPU
+		{E3B2CF31-39AF-4000-B6C5-F56351F7C13C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3B2CF31-39AF-4000-B6C5-F56351F7C13C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3B2CF31-39AF-4000-B6C5-F56351F7C13C}.Release|arm64.ActiveCfg = Release|Any CPU
+		{E3B2CF31-39AF-4000-B6C5-F56351F7C13C}.Release|arm64.Build.0 = Release|Any CPU
+		{E3B2CF31-39AF-4000-B6C5-F56351F7C13C}.Release|x64.ActiveCfg = Release|Any CPU
+		{E3B2CF31-39AF-4000-B6C5-F56351F7C13C}.Release|x64.Build.0 = Release|Any CPU
+		{E3B2CF31-39AF-4000-B6C5-F56351F7C13C}.Release|x86.ActiveCfg = Release|Any CPU
+		{E3B2CF31-39AF-4000-B6C5-F56351F7C13C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

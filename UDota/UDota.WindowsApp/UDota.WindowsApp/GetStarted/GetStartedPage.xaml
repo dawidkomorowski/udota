@@ -1,0 +1,16 @@
+﻿<Page
+    x:Class="UDota.WindowsApp.GetStarted.GetStartedPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UDota.WindowsApp.GetStarted"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+        <TextBlock FontSize="42">Unofficial DotA Team Analytics</TextBlock>
+        <TextBlock>Follow these easy steps to get started analyzing your Team data.</TextBlock>
+        <TextBlock FontSize="42" Foreground="Blue">TODO</TextBlock>
+    </StackPanel>
+</Page>

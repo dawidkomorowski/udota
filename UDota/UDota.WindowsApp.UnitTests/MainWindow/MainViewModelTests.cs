@@ -1,7 +1,7 @@
 using NUnit.Framework;
 using UDota.WindowsApp.MainWindow;
 
-namespace UDota.WindowsApp.UnitTests
+namespace UDota.WindowsApp.UnitTests.MainWindow
 {
     public class MainViewModelTests
     {

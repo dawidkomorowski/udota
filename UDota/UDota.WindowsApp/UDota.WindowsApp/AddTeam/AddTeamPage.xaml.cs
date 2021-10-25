@@ -16,8 +16,6 @@ namespace UDota.WindowsApp.AddTeam
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-
-            Header.Text = (string)e.Parameter;
         }
     }
 }

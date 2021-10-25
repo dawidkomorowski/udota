@@ -8,8 +8,8 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <StackPanel>
-        <TextBlock Name="Header" FontSize="48"></TextBlock>
-        <Button>This is Add Team page</Button>
+    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="15" Width="250">
+        <TextBox Description="Team name" Margin="10"/>
+        <Button Margin="10" HorizontalAlignment="Center">Add team member</Button>
     </StackPanel>
 </Page>

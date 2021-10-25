@@ -10,7 +10,7 @@
 
     <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
         <TextBlock FontSize="42">Unofficial DotA Team Analytics</TextBlock>
-        <TextBlock>Follow these easy steps to get started analyzing your Team data.</TextBlock>
+        <TextBlock>Follow these steps to get started analyzing your Team data.</TextBlock>
         <TextBlock FontSize="42" Foreground="Blue">TODO</TextBlock>
     </StackPanel>
 </Page>
